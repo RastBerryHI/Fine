@@ -1,0 +1,2 @@
+# Fine
+Animation rigging project
