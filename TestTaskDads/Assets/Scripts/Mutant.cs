@@ -1,6 +1,7 @@
 using UnityEngine.AI;
 using UnityEngine.VFX;
 using UnityEngine;
+using DG.Tweening;
 using System.Collections;
 
 public class Mutant : MonoBehaviour, IPawn
@@ -96,6 +97,9 @@ public class Mutant : MonoBehaviour, IPawn
     public void Die()
     {
         Debug.LogWarning("Mutant has died");
+
+        if (this != null)
+            transform.DOLocalMoveY(-100, 500);
         _animator.SetBool("isDead", true);
 
         _agent.enabled = false;
@@ -133,7 +137,11 @@ public class Mutant : MonoBehaviour, IPawn
     void FixedUpdate()
     {
         if (Health == 0)
+        {
             Die();
+            return;
+        }
+
 
         if( _animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == true )
         {

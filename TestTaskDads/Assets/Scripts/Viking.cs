@@ -105,7 +105,16 @@ public class Viking : MonoBehaviour, IPawn
 
     public void Attack()
     {
+        _animator.SetBool("isPrimary", Input.GetMouseButtonDown(0));
 
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Primary") == true)
+        {
+            b_isAttacking = true;
+        }
+        else
+        {
+            b_isAttacking = false;
+        }
     }
 
     public void Die()
@@ -139,19 +148,7 @@ public class Viking : MonoBehaviour, IPawn
         _animator.SetFloat("VelocityX", x);
         _animator.SetFloat("VelocityZ", z);
     }
-    void SetAttack()
-    {
-        _animator.SetBool("isPrimary", Input.GetMouseButtonDown(0));
 
-        if ( _animator.GetCurrentAnimatorStateInfo(0).IsName("Primary") == true )
-        {
-            b_isAttacking = true;
-        }
-        else if ( _animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion") == true )
-        {
-            b_isAttacking = false;
-        }
-    }
     void SetDamage()
     {
         if ( _animator.GetCurrentAnimatorStateInfo(0).IsName("VikingDamage") == true )
@@ -189,10 +186,17 @@ public class Viking : MonoBehaviour, IPawn
         _baseSpeed = MoveSpeed;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Health == 0)
             Die();
+        Attack();
+        SetDamage();
+    }
+
+    void FixedUpdate()
+    {
+        
 
         float x, z;
         Vector3 direction;
@@ -201,9 +205,7 @@ public class Viking : MonoBehaviour, IPawn
         direction = new Vector3(x, 0, z).normalized;
 
         SetStrafe(x, z);
-        SetAttack();
-        SetDamage();
-
+        
         float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + Camera.main.transform.eulerAngles.y;
         Vector3 converted = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
 
