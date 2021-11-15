@@ -1,0 +1,485 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.7f1 (c53830e277f1) revision 12924976'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1288; Version 2009; 64bit' Language: 'ru' Physical Memory: 8076 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/TestTask/TestTaskDads
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50487
+Successfully changed project path to: D:/TestTask/TestTaskDads
+D:/TestTask/TestTaskDads
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 86.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.7f1 (c53830e277f1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/TestTask/TestTaskDads/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce MX150 (ID=0x1d12)
+    Vendor:   
+    VRAM:     1983 MB
+    Driver:   27.21.14.6192
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56856
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005166 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 80.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.690 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003365 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 79.98 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.942 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2573 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.8 MB.
+System memory in use after: 129.0 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3006.
+Total: 4.743200 ms (FindLiveObjects: 0.452200 ms CreateObjectMapping: 0.210700 ms MarkObjects: 2.523900 ms  DeleteObjects: 1.553900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67e5b63536a3a7a75781d16cf44ced8a') in 0.746359 seconds
+  Import took 0.754840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.033248 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '309cbd004533395d666b2e4d3fa8cf63') in 0.196220 seconds
+  Import took 0.207052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.653532 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7fff014cd67580d1112b0f1aa8cd163') in 0.202647 seconds
+  Import took 0.210966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.451711 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e7fccb631216dde48def1d9a240f60c') in 0.180511 seconds
+  Import took 0.190922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.608449 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab0b3662c89ed06a280f83ba546f9aea') in 0.180536 seconds
+  Import took 0.190788 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.476975 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91b1aae5f1c955bc25752e4d28fd6c4c') in 0.180949 seconds
+  Import took 0.188808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.680246 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c3813b8622f23b278ac7b3565dc2fa5') in 0.207775 seconds
+  Import took 0.215904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.516042 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc88575f6189e2938f4e8e071f430be8') in 0.156659 seconds
+  Import took 0.165742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.330209 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '076a1fb19eb6cbde3a6245864e003d6f') in 0.171064 seconds
+  Import took 0.181117 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.099507 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Mutant/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2b094e349614e4647bba2c4abe75b67') in 0.192873 seconds
+  Import took 0.200774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.284354 seconds.
+  path: Assets/TestTask/VikingTestSources/VikingAController/AC_Viking.controller
+  artifactKey: Guid(978817728a53114449019e9029100945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/VikingAController/AC_Viking.controller using Guid(978817728a53114449019e9029100945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bddb0416a587e12611489c0ed9054f61') in 0.079280 seconds
+  Import took 0.090745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.763570 seconds.
+  path: Assets/TestTask/VikingTestSources/VikingAController/TopRig.mask
+  artifactKey: Guid(59e8fd94380bbb74cb46c2da1ac04fb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/VikingAController/TopRig.mask using Guid(59e8fd94380bbb74cb46c2da1ac04fb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41bd95e3965838a03dd577ece466192b') in 0.016756 seconds
+  Import took 0.026000 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001554 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.864 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2489 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 146.9 MB.
+System memory in use after: 145.1 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3091.
+Total: 9.900900 ms (FindLiveObjects: 0.592600 ms CreateObjectMapping: 0.307200 ms MarkObjects: 6.560000 ms  DeleteObjects: 2.438200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.643499 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec2ef6581451ad94dff13d4a736df08a') in 0.521402 seconds
+  Import took 0.531445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.833748 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a72448a9363421212a9fb1387e6e4e47') in 0.187790 seconds
+  Import took 0.203604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.400032 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bb62304414b743c8a765c0b89f84de2') in 0.184438 seconds
+  Import took 0.193541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.776517 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Left.fbx
+  artifactKey: Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Left.fbx using Guid(32d017691057df8429113f3e5797b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b764ad3a2ea02821a913528df4c1544') in 0.187064 seconds
+  Import took 0.195080 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001556 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.789 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2489 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.1 MB.
+System memory in use after: 145.3 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3130.
+Total: 5.901200 ms (FindLiveObjects: 0.360300 ms CreateObjectMapping: 0.173400 ms MarkObjects: 3.688300 ms  DeleteObjects: 1.676800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 152.057543 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Viking/Animations/mixamo.com.anim
+  artifactKey: Guid(87a0bfbf94295a94bb61553b5976f84b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Viking/Animations/mixamo.com.anim using Guid(87a0bfbf94295a94bb61553b5976f84b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52e12c7584af265c7e8230581e8f0d66') in 0.050932 seconds
+  Import took 0.060096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.272537 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Viking/Animations/LeftDodge.anim
+  artifactKey: Guid(87a0bfbf94295a94bb61553b5976f84b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Viking/Animations/LeftDodge.anim using Guid(87a0bfbf94295a94bb61553b5976f84b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a003c1fd45e6925ac25eccb149707eb') in 0.025770 seconds
+  Import took 0.032914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.026664 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Right.fbx
+  artifactKey: Guid(da67bc6f27700794d8630ef51a8652b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Right.fbx using Guid(da67bc6f27700794d8630ef51a8652b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca2ea4e3b5f79fb411d024c11dada8a7') in 0.500281 seconds
+  Import took 0.509573 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.594402 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Right.fbx
+  artifactKey: Guid(da67bc6f27700794d8630ef51a8652b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Viking/Animations/Standing Dodge Right.fbx using Guid(da67bc6f27700794d8630ef51a8652b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec7f183bbc24571a6dacc38f8e3d7897') in 0.211452 seconds
+  Import took 0.220857 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.196295 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Viking/Animations/mixamo.com.anim
+  artifactKey: Guid(5e047e218afa0454fb477b73fe4d41ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Viking/Animations/mixamo.com.anim using Guid(5e047e218afa0454fb477b73fe4d41ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ac4992cb1c9ae7d335a34947449f032') in 0.019276 seconds
+  Import took 0.031191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.494179 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Viking/Animations/RightDodge.anim
+  artifactKey: Guid(5e047e218afa0454fb477b73fe4d41ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Viking/Animations/RightDodge.anim using Guid(5e047e218afa0454fb477b73fe4d41ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a05c544f9e32fbd77836738bece9defe') in 0.024956 seconds
+  Import took 0.032571 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001820 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.951 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2489 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.3 MB.
+System memory in use after: 145.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3169.
+Total: 6.760200 ms (FindLiveObjects: 0.388900 ms CreateObjectMapping: 0.175500 ms MarkObjects: 3.614900 ms  DeleteObjects: 2.579000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001548 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.878 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2489 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.3 MB.
+System memory in use after: 145.6 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3172.
+Total: 5.848300 ms (FindLiveObjects: 0.479400 ms CreateObjectMapping: 0.229300 ms MarkObjects: 3.089800 ms  DeleteObjects: 2.046800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002408 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.965 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2489 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.2 MB.
+System memory in use after: 145.4 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3175.
+Total: 9.444800 ms (FindLiveObjects: 0.629400 ms CreateObjectMapping: 0.296600 ms MarkObjects: 5.198000 ms  DeleteObjects: 3.317700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003692 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.722 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2489 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.3 MB.
+System memory in use after: 145.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3178.
+Total: 9.651600 ms (FindLiveObjects: 0.709600 ms CreateObjectMapping: 0.365100 ms MarkObjects: 4.662100 ms  DeleteObjects: 3.911800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002695 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.929 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2489 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.3 MB.
+System memory in use after: 145.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3181.
+Total: 9.095400 ms (FindLiveObjects: 1.782700 ms CreateObjectMapping: 0.642000 ms MarkObjects: 3.724300 ms  DeleteObjects: 2.943600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005658 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.879 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.60 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2489 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.3 MB.
+System memory in use after: 145.6 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3184.
+Total: 11.446100 ms (FindLiveObjects: 1.917000 ms CreateObjectMapping: 0.524900 ms MarkObjects: 6.847900 ms  DeleteObjects: 2.153700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 826.830772 seconds.
+  path: Assets/TestTask/VikingTestSources/Models/Viking/Animations/RightDodge.anim
+  artifactKey: Guid(5e047e218afa0454fb477b73fe4d41ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TestTask/VikingTestSources/Models/Viking/Animations/RightDodge.anim using Guid(5e047e218afa0454fb477b73fe4d41ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7539fa43ef183bcc27fd508654d94a4c') in 0.057514 seconds
+  Import took 0.072648 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009433 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 3.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in 11.056 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2489 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.3 MB.
+System memory in use after: 145.6 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3187.
+Total: 84.781300 ms (FindLiveObjects: 9.086500 ms CreateObjectMapping: 1.483400 ms MarkObjects: 65.631200 ms  DeleteObjects: 8.576000 ms)
+

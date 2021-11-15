@@ -1,0 +1,329 @@
+fileFormatVersion: 2
+guid: fd84436462e35e6468cf9a7b72964b15
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 121
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: -0.5
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 2
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Idle(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MutantMesh
+      parentName: Idle(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mutant:Hips
+      parentName: Idle(Clone)
+      position: {x: -0.0000000038743018, y: 1.9023491, z: -0.00000003069639}
+      rotation: {x: -1.8189894e-10, y: -1.6433849e-19, z: 9.0346053e-10, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Mutant:RightUpLeg
+      parentName: Mutant:Hips
+      position: {x: 0.27311945, y: -0.14270484, z: 0.0025939273}
+      rotation: {x: 0.000000011823429, y: -0.000000011641532, z: 0.000000022379604, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Mutant:RightLeg
+      parentName: Mutant:RightUpLeg
+      position: {x: 0.0000005374799, y: -0.7183825, z: 0.029628804}
+      rotation: {x: -0.00000002328306, y: -1.7763568e-15, z: -0.000000020372681, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Mutant:RightFoot
+      parentName: Mutant:RightLeg
+      position: {x: 8.5265126e-16, y: -0.6861479, z: -0.052934874}
+      rotation: {x: 0.00000001164153, y: 0.000000023283066, z: -0.0000000029103846, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: Mutant:RightToeBase
+      parentName: Mutant:RightFoot
+      position: {x: 1.3145041e-15, y: -0.303862, z: 0.29823628}
+      rotation: {x: 0.000000005820765, y: -0.000000011641532, z: -0.0000000080035525, w: 1}
+      scale: {x: 0.9999999, y: 1.0000002, z: 0.9999999}
+    - name: Mutant:RightToe_End
+      parentName: Mutant:RightToeBase
+      position: {x: -6.3948843e-16, y: 8.5265126e-16, z: 0.33767638}
+      rotation: {x: -0, y: -0, z: 2.7117089e-25, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mutant:LeftUpLeg
+      parentName: Mutant:Hips
+      position: {x: -0.27311945, y: -0.14270484, z: 0.0025939273}
+      rotation: {x: 1.8189894e-10, y: 4.399504e-18, z: -0.00000002418653, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: Mutant:LeftLeg
+      parentName: Mutant:LeftUpLeg
+      position: {x: -0.0000005374799, y: -0.7183825, z: 0.029628804}
+      rotation: {x: 0.000000011641532, y: -0.000000011641532, z: 0.000000020372687, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999976}
+    - name: Mutant:LeftFoot
+      parentName: Mutant:LeftLeg
+      position: {x: -1.2434498e-15, y: -0.6861479, z: -0.052934874}
+      rotation: {x: -0.000000011641532, y: 0.000000011641532, z: 0.0000000029103873, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mutant:LeftToeBase
+      parentName: Mutant:LeftFoot
+      position: {x: -9.592326e-16, y: -0.303862, z: 0.29823628}
+      rotation: {x: 8.470279e-18, y: -0.00000001164153, z: -4.1633368e-15, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+    - name: Mutant:LeftToe_End
+      parentName: Mutant:LeftToeBase
+      position: {x: -2.4868996e-16, y: -9.681145e-16, z: 0.33767638}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mutant:Spine
+      parentName: Mutant:Hips
+      position: {x: 5.995204e-17, y: 0.21527715, z: 0.024870332}
+      rotation: {x: -0.0000000114596315, y: 9.0949484e-11, z: -9.9441e-10, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Mutant:Spine1
+      parentName: Mutant:Spine
+      position: {x: 0.0003785321, y: 0.26122686, z: 0.0045496156}
+      rotation: {x: -0.000000011641534, y: -2.8421707e-10, z: 4.5474728e-11, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: Mutant:Spine2
+      parentName: Mutant:Spine1
+      position: {x: 0.0004326083, y: 0.25976425, z: -0.018333742}
+      rotation: {x: 0.000000023283064, y: 1.9326758e-10, z: 7.730705e-10, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: Mutant:RightShoulder
+      parentName: Mutant:Spine2
+      position: {x: 0.19107135, y: 0.32130772, z: -0.10455664}
+      rotation: {x: 1.270549e-16, y: -0.00000001164153, z: -0.000000012369126, w: 1}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Mutant:RightArm
+      parentName: Mutant:RightShoulder
+      position: {x: 0.35623753, y: 0.041321598, z: -0.018458588}
+      rotation: {x: 0.000000023283064, y: 0.0000000029103813, z: 0.000000023283063, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: Mutant:RightForeArm
+      parentName: Mutant:RightArm
+      position: {x: 0.5274953, y: -0.0000020336493, z: -0.029181287}
+      rotation: {x: -0.000000034924597, y: 0.000000008731149, z: 0.000000011641536, w: 1}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000002}
+    - name: Mutant:RightHand
+      parentName: Mutant:RightForeArm
+      position: {x: 0.53506863, y: 0.000007144026, z: 0.00000032100064}
+      rotation: {x: 0.000000011641532, y: 0.000000016007107, z: -0.000000037107387, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 0.99999964}
+    - name: Mutant:RightHandPinky1
+      parentName: Mutant:RightHand
+      position: {x: 0.3501553, y: -0.0095548965, z: -0.2000616}
+      rotation: {x: -8.438567e-16, y: -0.000000039290175, z: 0.000000025465853, w: 1}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000004}
+    - name: Mutant:RightHandPinky2
+      parentName: Mutant:RightHandPinky1
+      position: {x: 0.14088444, y: 1.5897911e-10, z: -3.6784443e-12}
+      rotation: {x: -0.000000023283066, y: 0.000000029103836, z: -0.000000011641533, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 0.9999999}
+    - name: Mutant:RightHandPinky3
+      parentName: Mutant:RightHandPinky2
+      position: {x: 0.14157806, y: 8.23627e-11, z: 0}
+      rotation: {x: 0.0000000116415375, y: 0.0000000058207648, z: 0.0000000058207665, w: 1}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1}
+    - name: Mutant:RightHandPinky4
+      parentName: Mutant:RightHandPinky3
+      position: {x: 0.14185916, y: 4.8873402e-11, z: -4.653128e-10}
+      rotation: {x: -0, y: -0, z: 1.3552525e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mutant:RightHandIndex1
+      parentName: Mutant:RightHand
+      position: {x: 0.36895508, y: 0.029597796, z: 0.17308497}
+      rotation: {x: -1.9375879e-16, y: -0.000000013096724, z: 0.000000028376235, w: 1}
+      scale: {x: 1.000001, y: 1.0000008, z: 1.0000005}
+    - name: Mutant:RightHandIndex2
+      parentName: Mutant:RightHandIndex1
+      position: {x: 0.15028758, y: 1.5898365e-10, z: -3.678853e-12}
+      rotation: {x: -0.00000006984919, y: 0.000000008731153, z: -0.000000014551914, w: 1}
+      scale: {x: 0.9999992, y: 0.99999946, z: 0.9999996}
+    - name: Mutant:RightHandIndex3
+      parentName: Mutant:RightHandIndex2
+      position: {x: 0.14978775, y: 1.3701196e-10, z: 1.7763568e-17}
+      rotation: {x: 0.000000069847694, y: 0.0020918755, z: 0.0062141144, w: 0.99997854}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: Mutant:RightHandIndex4
+      parentName: Mutant:RightHandIndex3
+      position: {x: 0.13477595, y: -0.012249059, z: 0.0041234745}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mutant:RightHandThumb1
+      parentName: Mutant:RightHand
+      position: {x: 0.049846955, y: -0.08892695, z: 0.12326953}
+      rotation: {x: -0.09575881, y: 0.0063885823, z: 0.09575882, w: 0.99076724}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000006}
+    - name: Mutant:RightHandThumb2
+      parentName: Mutant:RightHandThumb1
+      position: {x: 0.13205285, y: -0.08628008, z: 0.13780898}
+      rotation: {x: -0.009657927, y: -0.07569176, z: -0.038134918, w: 0.996355}
+      scale: {x: 1, y: 0.9999998, z: 0.9999998}
+    - name: Mutant:RightHandThumb3
+      parentName: Mutant:RightHandThumb2
+      position: {x: 0.13569534, y: -0.059338007, z: 0.08341053}
+      rotation: {x: 0.0024793234, y: -0.03532138, z: -0.029160999, w: 0.99894744}
+      scale: {x: 0.9999997, y: 1, z: 1}
+    - name: Mutant:RightHandThumb4
+      parentName: Mutant:RightHandThumb3
+      position: {x: 0.14261307, y: -0.04067501, z: 0.061392706}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mutant:LeftShoulder
+      parentName: Mutant:Spine2
+      position: {x: -0.19107135, y: 0.32130772, z: -0.10455664}
+      rotation: {x: -6.988022e-17, y: -0.000000002910383, z: 0.000000022555469, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Mutant:LeftArm
+      parentName: Mutant:LeftShoulder
+      position: {x: -0.3578598, y: 0.041321598, z: -0.018458588}
+      rotation: {x: -0.000000023283064, y: 0.000000018917488, z: -0.000000017462298, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: Mutant:LeftForeArm
+      parentName: Mutant:LeftArm
+      position: {x: -0.5274953, y: -0.0000020336493, z: -0.029181287}
+      rotation: {x: 0.000000011641532, y: -0.000000021827871, z: -0.000000005820766, w: 1}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000004}
+    - name: Mutant:LeftHand
+      parentName: Mutant:LeftForeArm
+      position: {x: -0.53506863, y: 0.000007144026, z: 0.00000032100064}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mutant:Neck
+      parentName: Mutant:Spine2
+      position: {x: 0.00023854218, y: 0.49341318, z: 0.040562015}
+      rotation: {x: -0.055574164, y: 1.01088846e-10, z: 2.0421331e-10, w: 0.9984546}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    - name: Mutant:Head
+      parentName: Mutant:Neck
+      position: {x: 5.1551402e-11, y: 0.1763465, z: 0.12205231}
+      rotation: {x: -0.00000004656613, y: -7.2759593e-10, z: -0.0000000010913936, w: 1}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999999}
+    - name: Mutant:HeadTop_End
+      parentName: Mutant:Head
+      position: {x: -0.0010496826, y: 0.40987873, z: -0.005650078}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 2
+    rootMotionBoneName: Mutant:Hips
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
