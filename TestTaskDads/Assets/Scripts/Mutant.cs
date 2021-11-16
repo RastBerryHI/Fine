@@ -12,6 +12,7 @@ public class Mutant : MonoBehaviour, IPawn
     [SerializeField] private float _attackSpeed;
     [SerializeField] private float _smoothing;
     [SerializeField] private bool b_isAttacking;
+    [SerializeField] private bool b_isAlive = true;
 
     [SerializeField] private VisualEffect _bloodFx;
 
@@ -96,11 +97,13 @@ public class Mutant : MonoBehaviour, IPawn
 
     public void Die()
     {
-        Debug.LogWarning("Mutant has died");
-
         if (this != null)
+        {
+            //Spawner.s_instance.AddEnemy(Spawner.s_instance.GetRandomPosition());
             transform.DOLocalMoveY(-100, 500);
+        }
         _animator.SetBool("isDead", true);
+        b_isAlive = false;
 
         _agent.enabled = false;
         Destroy(gameObject, 3f);
@@ -122,7 +125,7 @@ public class Mutant : MonoBehaviour, IPawn
     public void Move(Vector3 direction, float speed)
     {
         _agent.speed = speed;
-        _agent.SetDestination(Viking.instance.transform.position);
+        _agent.SetDestination(Viking.s_instance.transform.position);
 
         _animator.SetFloat("Velocity", _agent.velocity.magnitude);
         _animator.SetBool("isAttack", false);
@@ -132,6 +135,23 @@ public class Mutant : MonoBehaviour, IPawn
     {
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+        
+    }
+
+    void Update()
+    {
+        if (_agent.velocity.magnitude <= 0.1f)
+        {
+            transform.LookAt(Viking.s_instance.transform);
+            if ( Viking.s_instance != null )
+            {
+                _animator.SetBool("isAttack", true);
+            }
+        }
     }
 
     void FixedUpdate()
@@ -145,20 +165,16 @@ public class Mutant : MonoBehaviour, IPawn
 
         if( _animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == true )
         {
-            Move(Viking.instance.transform.position, Mathf.Lerp(MoveSpeed, 0, _smoothing));
+            Move(Viking.s_instance.transform.position, Mathf.Lerp(MoveSpeed, 0, _smoothing));
         }
         else if( _animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == false)
         {
-            Move(Viking.instance.transform.position, MoveSpeed);
+            Move(Viking.s_instance.transform.position, MoveSpeed);
         }
+    }
 
-        if (_agent.velocity.magnitude <= 0.1f)
-        {
-            if(Viking.instance != null)
-            {
-                _animator.SetBool("isAttack", true);
-                transform.LookAt(Viking.instance.transform.position);
-            }
-        }
+    void OnDestroy()
+    {
+        Spawner.s_instance.OnEnemyDeath();
     }
 }

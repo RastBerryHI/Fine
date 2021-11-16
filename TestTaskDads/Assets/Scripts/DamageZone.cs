@@ -11,7 +11,7 @@ public class DamageZone : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Viking.instance.EarnDamage(_damage);
+            Viking.s_instance.EarnDamage(_damage);
         }
     }
 }

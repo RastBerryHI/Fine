@@ -11,7 +11,7 @@ enum CommonStates : byte
 
 public class Viking : MonoBehaviour, IPawn
 {
-    public static Viking instance;
+    public static Viking s_instance;
 
     [SerializeField] private float _health;
     [SerializeField] private float _moveSpeed;
@@ -120,6 +120,7 @@ public class Viking : MonoBehaviour, IPawn
     public void Die()
     {
         Debug.LogError("Viking has died");
+        _characterController.enabled = false;
     }
 
     public void EarnDamage(float damage)
@@ -175,10 +176,10 @@ public class Viking : MonoBehaviour, IPawn
         _characterController = GetComponent<CharacterController>();
         _animator = GetComponentInChildren<Animator>();
 
-        if (instance == null)
-            instance = this;
+        if (s_instance == null)
+            s_instance = this;
         else
-            instance = null;
+            s_instance = null;
     }
 
     void Start()
@@ -196,8 +197,6 @@ public class Viking : MonoBehaviour, IPawn
 
     void FixedUpdate()
     {
-        
-
         float x, z;
         Vector3 direction;
 

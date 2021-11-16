@@ -11,7 +11,7 @@ public class VikingAnimationEvents : MonoBehaviour
     void Start()
     {
         _axe.enabled = false;
-        _damageZone._damage = Viking.instance.Damage;
+        _damageZone._damage = Viking.s_instance.Damage;
     }
 
     void OpenVikingZone()
@@ -26,7 +26,7 @@ public class VikingAnimationEvents : MonoBehaviour
 
     void EndDodge()
     {
-        Viking.instance._animator.SetFloat("DodgeAxis", 0);
-        Viking.instance._animator.SetFloat("DodgeAxisY", 0);
+        Viking.s_instance._animator.SetFloat("DodgeAxis", 0);
+        Viking.s_instance._animator.SetFloat("DodgeAxisY", 0);
     }
 }
