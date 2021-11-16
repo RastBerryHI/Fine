@@ -16,6 +16,7 @@ public class Mutant : MonoBehaviour, IPawn
     [SerializeField] private bool b_isAlive = true;
 
     [SerializeField] private VisualEffect _bloodFx;
+    [SerializeField] private MutantHealthBar _healthBar;
 
     private NavMeshAgent _agent;
     private Animator _animator;
@@ -106,6 +107,7 @@ public class Mutant : MonoBehaviour, IPawn
         }
         _animator.SetBool("isDead", true);
         b_isAlive = false;
+       
 
         _target.b_isBusy = false;
         _agent.enabled = false;
@@ -115,6 +117,8 @@ public class Mutant : MonoBehaviour, IPawn
     public void EarnDamage(float damage)
     {
         Health -= damage;
+        _healthBar.SetHealth(Health);
+
         _bloodFx.Play();
         StartCoroutine(TurnOffDamage());
     }
@@ -140,8 +144,16 @@ public class Mutant : MonoBehaviour, IPawn
         _animator = GetComponent<Animator>();
     }
 
+    void Start()
+    {
+        _healthBar.SetMaxHealth(Health);
+    }
+
     void Update()
     {
+        if (b_isAlive == false)
+            return;
+
         if (_agent.velocity.magnitude <= 0.1f)
         {
             transform.LookAt(Viking.s_instance.transform);
