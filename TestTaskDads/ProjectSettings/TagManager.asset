@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Terrain
   - Mutant
+  - Attention
+  - Free
+  - Busy
   layers:
   - Default
   - TransparentFX

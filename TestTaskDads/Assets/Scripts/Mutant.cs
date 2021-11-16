@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using System.Collections;
 
+
 public class Mutant : MonoBehaviour, IPawn
 {
     [SerializeField] private float _health;
@@ -18,6 +19,7 @@ public class Mutant : MonoBehaviour, IPawn
 
     private NavMeshAgent _agent;
     private Animator _animator;
+    public  AttentionPoint _target;
     public float Health
     {
         get => _health;
@@ -105,6 +107,7 @@ public class Mutant : MonoBehaviour, IPawn
         _animator.SetBool("isDead", true);
         b_isAlive = false;
 
+        _target.b_isBusy = false;
         _agent.enabled = false;
         Destroy(gameObject, 3f);
     }
@@ -125,7 +128,7 @@ public class Mutant : MonoBehaviour, IPawn
     public void Move(Vector3 direction, float speed)
     {
         _agent.speed = speed;
-        _agent.SetDestination(Viking.s_instance.transform.position);
+        _agent.SetDestination(direction);
 
         _animator.SetFloat("Velocity", _agent.velocity.magnitude);
         _animator.SetBool("isAttack", false);
@@ -135,11 +138,6 @@ public class Mutant : MonoBehaviour, IPawn
     {
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
-    }
-
-    void Start()
-    {
-        
     }
 
     void Update()
@@ -162,14 +160,16 @@ public class Mutant : MonoBehaviour, IPawn
             return;
         }
 
+        if (_target == null)
+            return;
 
         if( _animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == true )
         {
-            Move(Viking.s_instance.transform.position, Mathf.Lerp(MoveSpeed, 0, _smoothing));
+            Move(_target.transform.position, Mathf.Lerp(MoveSpeed, 0, _smoothing));
         }
-        else if( _animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == false)
+        else if( _animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == false )
         {
-            Move(Viking.s_instance.transform.position, MoveSpeed);
+            Move(_target.transform.position, MoveSpeed);
         }
     }
 

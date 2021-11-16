@@ -1,6 +1,8 @@
-using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.VFX;
 
 enum CommonStates : byte 
@@ -9,7 +11,7 @@ enum CommonStates : byte
     Combat
 }
 
-public class Viking : MonoBehaviour, IPawn
+public class Viking : MonoBehaviour, IPawn, IEnumerable
 {
     public static Viking s_instance;
 
@@ -23,10 +25,14 @@ public class Viking : MonoBehaviour, IPawn
     [SerializeField] private float _smoothing;
 
     [SerializeField] private VisualEffect _bloodFx;
+    [SerializeField] private Volume _damageVolume; 
+    [SerializeField] private GameObject _attentionPointsParent;
 
-    private CharacterController _characterController;
     public Animator _animator;
+    private CharacterController _characterController;
     private float _baseSpeed;
+
+    private List<AttentionPoint> _attentionPoints;
 
     public float Health 
     { 
@@ -102,6 +108,18 @@ public class Viking : MonoBehaviour, IPawn
     {
         get => b_isBeingDamaged;
     }
+    public List<AttentionPoint> AttentionPoints
+    {
+        get => _attentionPoints;
+    }
+    public AttentionPoint this[int index]
+    {
+        get => _attentionPoints[index];
+        set
+        {
+            _attentionPoints[index] = value;
+        }
+    }
     public void DealDamage(IPawn pawn , float damage)
     {
         pawn.EarnDamage(damage);
@@ -158,11 +176,13 @@ public class Viking : MonoBehaviour, IPawn
     {
         if ( _animator.GetCurrentAnimatorStateInfo(0).IsName("VikingDamage") == true )
         {
-           b_isBeingDamaged = true;
+            b_isBeingDamaged = true;
+            _damageVolume.weight = Mathf.Lerp(_damageVolume.weight, 1, 0.1f);
         }
         else if ( _animator.GetCurrentAnimatorStateInfo(0).IsName("VikingDamage") == false)
         {
-            b_isBeingDamaged = false;
+             b_isBeingDamaged = false;
+            _damageVolume.weight = Mathf.Lerp(_damageVolume.weight, 0, 0.1f);
         }
     }
     #endregion
@@ -174,16 +194,20 @@ public class Viking : MonoBehaviour, IPawn
         _animator.SetBool("isDamage", false);
         _bloodFx.Stop();
     }
-#endregion
+    #endregion
+
+
     void Awake()
     {
         _characterController = GetComponent<CharacterController>();
-        _animator = GetComponentInChildren<Animator>();
+        _animator = GetComponentInChildren<Animator>();       
 
         if (s_instance == null)
             s_instance = this;
         else
             s_instance = null;
+        _attentionPoints = _attentionPointsParent.GetComponentsInChildren<AttentionPoint>().ToList<AttentionPoint>();
+        _attentionPoints.RemoveAt(0);
     }
 
     void Start()
@@ -216,6 +240,7 @@ public class Viking : MonoBehaviour, IPawn
         {
             case true:
                 MoveSpeed = 3;
+
                 break;
             case false:
                 MoveSpeed = _baseSpeed;
@@ -229,6 +254,14 @@ public class Viking : MonoBehaviour, IPawn
         else if( direction.magnitude >= 0.1f && b_isAttacking == true )
         {
             Move(converted, Mathf.Lerp(MoveSpeed, 0, _smoothing));
+        }
+    }
+
+    public IEnumerator GetEnumerator()
+    {
+        for(int i = 0; i < _attentionPoints.Count; i++)
+        {
+            yield return _attentionPoints[i];
         }
     }
 }
