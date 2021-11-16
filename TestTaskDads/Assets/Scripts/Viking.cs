@@ -98,6 +98,10 @@ public class Viking : MonoBehaviour, IPawn
     {
         get => b_isAttacking;
     }
+    public bool IsBeingDamaged
+    {
+        get => b_isBeingDamaged;
+    }
     public void DealDamage(IPawn pawn , float damage)
     {
         pawn.EarnDamage(damage);
