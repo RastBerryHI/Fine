@@ -20,10 +20,6 @@ public interface IPawn
     /// </summary>
     float Damage { get; set; }
     /// <summary>
-    /// Access to attack speed 
-    /// </summary>
-    float AttackSpeed { get; set; }
-    /// <summary>
     /// Method for mutating pawn's health
     /// </summary>
     /// <param name="pawn"> pawn to mutate </param>

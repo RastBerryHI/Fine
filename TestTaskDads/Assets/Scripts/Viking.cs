@@ -27,6 +27,7 @@ public class Viking : MonoBehaviour, IPawn, IEnumerable
     [SerializeField] private VisualEffect _bloodFx;
     [SerializeField] private Volume _damageVolume; 
     [SerializeField] private GameObject _attentionPointsParent;
+    [SerializeField] private VikigHealthBar _healthBar;
 
     public Animator _animator;
     private CharacterController _characterController;
@@ -81,25 +82,6 @@ public class Viking : MonoBehaviour, IPawn, IEnumerable
                 _damage = 3;
         }
     }
-    public float AttackSpeed
-    {
-        get => _attackSpeed;
-        set
-        {
-            if (_attackSpeed < 0.5f)
-            {
-                _attackSpeed = 0.5f;
-            }
-            else if (_attackSpeed > 2)
-            {
-                _attackSpeed = 2;
-            }
-            else
-            {
-                _attackSpeed = value;
-            }
-        }
-    }
     public bool IsAttacking
     {
         get => b_isAttacking;
@@ -149,6 +131,8 @@ public class Viking : MonoBehaviour, IPawn, IEnumerable
     {
         Health -= damage;
         _bloodFx.Play();
+        _healthBar.SetHealth(Health);
+
 
         _animator.SetBool("isDamage", true);
         StartCoroutine(TurnOffDamage());
@@ -213,6 +197,7 @@ public class Viking : MonoBehaviour, IPawn, IEnumerable
     void Start()
     {
         _baseSpeed = MoveSpeed;
+        _healthBar.SetMaxHealth(Health);
     }
 
     void Update()

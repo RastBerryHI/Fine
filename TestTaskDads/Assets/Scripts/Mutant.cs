@@ -17,9 +17,12 @@ public class Mutant : MonoBehaviour, IPawn
 
     [SerializeField] private VisualEffect _bloodFx;
     [SerializeField] private MutantHealthBar _healthBar;
+    [SerializeField] private GameObject _healthSphere;
 
     private NavMeshAgent _agent;
     private Animator _animator;
+    private bool b_isTakenPosition = false;
+    private Vector3 _healthSpherePosition;
     public  AttentionPoint _target;
     public float Health
     {
@@ -68,29 +71,14 @@ public class Mutant : MonoBehaviour, IPawn
                 _damage = 1;
         } 
     }
-    public float AttackSpeed 
-    { 
-        get => _attackSpeed;
-        set
-        {
-            if(_attackSpeed < 0.5f)
-            {
-                _attackSpeed = 0.5f;
-            }
-            else if(_attackSpeed > 2)
-            {
-                _attackSpeed = 2;
-            }
-            else
-            {
-                _attackSpeed = value;
-            }
-        }
-    }
 
     public void Attack()
     {
-        throw new System.NotImplementedException();
+        transform.LookAt(Viking.s_instance.transform);
+        if (Viking.s_instance != null)
+        {
+            _animator.SetBool("isAttack", true);
+        }
     }
 
     public void DealDamage(IPawn pawn, float damage)
@@ -100,6 +88,11 @@ public class Mutant : MonoBehaviour, IPawn
 
     public void Die()
     {
+        if( b_isTakenPosition == false)
+        {
+            _healthSpherePosition = transform.position;
+            b_isTakenPosition = true;
+        }
         if (this != null)
         {
             //Spawner.s_instance.AddEnemy(Spawner.s_instance.GetRandomPosition());
@@ -156,11 +149,7 @@ public class Mutant : MonoBehaviour, IPawn
 
         if (_agent.velocity.magnitude <= 0.1f)
         {
-            transform.LookAt(Viking.s_instance.transform);
-            if ( Viking.s_instance != null )
-            {
-                _animator.SetBool("isAttack", true);
-            }
+            Attack();
         }
     }
 
@@ -187,6 +176,7 @@ public class Mutant : MonoBehaviour, IPawn
 
     void OnDestroy()
     {
+        Instantiate<GameObject>(_healthSphere, new Vector3(_healthSpherePosition.x, _healthSpherePosition.y + 0.5f, _healthSpherePosition.z), Quaternion.identity);
         Spawner.s_instance.OnEnemyDeath();
     }
 }
