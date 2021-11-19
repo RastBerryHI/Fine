@@ -179,4 +179,13 @@ public class Mutant : MonoBehaviour, IPawn
         Instantiate<GameObject>(_healthSphere, new Vector3(_healthSpherePosition.x, _healthSpherePosition.y + 0.5f, _healthSpherePosition.z), Quaternion.identity);
         Spawner.s_instance.OnEnemyDeath();
     }
+
+    private void OnApplicationQuit()
+    {
+        Mutant[] mutants = GameObject.FindObjectsOfType<Mutant>();
+        for(int i = 0; i < mutants.Length; i++)
+        {
+            Destroy(mutants[i].gameObject);
+        }
+    }
 }

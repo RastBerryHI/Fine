@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Aiming : MonoBehaviour
@@ -10,9 +8,6 @@ public class Aiming : MonoBehaviour
     void Awake()
     {
         camera = Camera.main;
-
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void FixedUpdate()

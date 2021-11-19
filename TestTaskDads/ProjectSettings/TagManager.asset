@@ -9,6 +9,7 @@ TagManager:
   - Attention
   - Free
   - Busy
+  - Menu
   layers:
   - Default
   - TransparentFX

@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.VFX;
+using Cinemachine;
 
 enum CommonStates : byte 
 {
@@ -18,7 +19,6 @@ public class Viking : MonoBehaviour, IPawn, IEnumerable
     [SerializeField] private float _health;
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _damage;
-    [SerializeField] private float _attackSpeed;
 
     [SerializeField] private bool b_isAttacking;
     [SerializeField] private bool b_isBeingDamaged;
@@ -28,6 +28,8 @@ public class Viking : MonoBehaviour, IPawn, IEnumerable
     [SerializeField] private Volume _damageVolume; 
     [SerializeField] private GameObject _attentionPointsParent;
     [SerializeField] private VikigHealthBar _healthBar;
+
+    [SerializeField] private CinemachineFreeLook _cinemachineBrain;
 
     public Animator _animator;
     private CharacterController _characterController;
@@ -123,8 +125,13 @@ public class Viking : MonoBehaviour, IPawn, IEnumerable
 
     public void Die()
     {
-        Debug.LogError("Viking has died");
+        _animator.SetBool("isDead", true);
+
         _characterController.enabled = false;
+        _cinemachineBrain.m_XAxis.m_MaxSpeed = 0;
+        _cinemachineBrain.m_YAxis.m_MaxSpeed = 0;
+
+        GameObject.FindObjectsOfType<Mutant>().ToList<Mutant>().ForEach(mutant => mutant._target = null);
     }
 
     public void EarnDamage(float damage)
@@ -137,7 +144,15 @@ public class Viking : MonoBehaviour, IPawn, IEnumerable
         _animator.SetBool("isDamage", true);
         StartCoroutine(TurnOffDamage());
     }
-
+    /// <summary>
+    /// Public method for accessing to healing & mutating health bar
+    /// </summary>
+    /// <param name="hp"></param>
+    public void Heal(float hp)
+    {
+        Health += hp;
+        _healthBar.SetHealth(Health);
+    }
     public void Move(Vector3 direction, float speed)
     {
         direction += Physics.gravity;
