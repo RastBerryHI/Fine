@@ -92,6 +92,10 @@ public class Viking : MonoBehaviour, IPawn, IEnumerable
     {
         get => b_isBeingDamaged;
     }
+    public float DamageVolume
+    {
+        set => _damageVolume.weight = value;   
+    }
     public List<AttentionPoint> AttentionPoints
     {
         get => _attentionPoints;
