@@ -131,6 +131,7 @@ public class Viking : MonoBehaviour, IPawn, IEnumerable
         _cinemachineBrain.m_XAxis.m_MaxSpeed = 0;
         _cinemachineBrain.m_YAxis.m_MaxSpeed = 0;
 
+        CursorInterractionController.s_instance.ShowMenuNoFreezing();
         GameObject.FindObjectsOfType<Mutant>().ToList<Mutant>().ForEach(mutant => mutant._target = null);
     }
 
@@ -199,12 +200,16 @@ public class Viking : MonoBehaviour, IPawn, IEnumerable
     void Awake()
     {
         _characterController = GetComponent<CharacterController>();
-        _animator = GetComponentInChildren<Animator>();       
+        _animator = GetComponentInChildren<Animator>();
 
         if (s_instance == null)
+        {
             s_instance = this;
+        }
         else
-            s_instance = null;
+        {
+            Destroy(s_instance);
+        }
         _attentionPoints = _attentionPointsParent.GetComponentsInChildren<AttentionPoint>().ToList<AttentionPoint>();
         _attentionPoints.RemoveAt(0);
     }

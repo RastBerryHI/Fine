@@ -10,9 +10,7 @@ public class Mutant : MonoBehaviour, IPawn
     [SerializeField] private float _health;
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _damage;
-    [SerializeField] private float _attackSpeed;
     [SerializeField] private float _smoothing;
-    [SerializeField] private bool b_isAttacking;
     [SerializeField] private bool b_isAlive = true;
 
     [SerializeField] private VisualEffect _bloodFx;
@@ -75,9 +73,13 @@ public class Mutant : MonoBehaviour, IPawn
     public void Attack()
     {
         transform.LookAt(Viking.s_instance.transform);
-        if (Viking.s_instance != null)
+        if ( _target != null )
         {
             _animator.SetBool("isAttack", true);
+        }
+        else if( _target == null)
+        {
+            _animator.SetBool("isAttack", false);
         }
     }
 
@@ -88,6 +90,7 @@ public class Mutant : MonoBehaviour, IPawn
 
     public void Die()
     {
+        _target.b_isBusy = false;
         if( b_isTakenPosition == false)
         {
             _healthSpherePosition = transform.position;
@@ -102,7 +105,6 @@ public class Mutant : MonoBehaviour, IPawn
         b_isAlive = false;
        
 
-        _target.b_isBusy = false;
         _agent.enabled = false;
         Destroy(gameObject, 3f);
     }
@@ -144,10 +146,10 @@ public class Mutant : MonoBehaviour, IPawn
 
     void Update()
     {
-        if (b_isAlive == false)
+        if ( b_isAlive == false )
             return;
 
-        if (_agent.velocity.magnitude <= 0.1f)
+        if ( _agent.velocity.magnitude <= 0.1f )
         {
             Attack();
         }
@@ -155,14 +157,17 @@ public class Mutant : MonoBehaviour, IPawn
 
     void FixedUpdate()
     {
+        if ( b_isAlive == false )
+            return;
+
+        if ( _target == null ) 
+            return;
+
         if (Health == 0)
         {
             Die();
             return;
         }
-
-        if (_target == null)
-            return;
 
         if( _animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == true )
         {
@@ -178,14 +183,5 @@ public class Mutant : MonoBehaviour, IPawn
     {
         Instantiate<GameObject>(_healthSphere, new Vector3(_healthSpherePosition.x, _healthSpherePosition.y + 0.5f, _healthSpherePosition.z), Quaternion.identity);
         Spawner.s_instance.OnEnemyDeath();
-    }
-
-    private void OnApplicationQuit()
-    {
-        Mutant[] mutants = GameObject.FindObjectsOfType<Mutant>();
-        for(int i = 0; i < mutants.Length; i++)
-        {
-            Destroy(mutants[i].gameObject);
-        }
     }
 }
